@@ -5,7 +5,10 @@ public class Course {
         private Long id;
         private String username;
         private String description;
-        //no arg constructor
+
+    public Course(long l, String in28minutes, String s) {
+    }
+    //no arg constructor
         //constructor with 3 args
         //getters and setters
         //hashcode and equals
