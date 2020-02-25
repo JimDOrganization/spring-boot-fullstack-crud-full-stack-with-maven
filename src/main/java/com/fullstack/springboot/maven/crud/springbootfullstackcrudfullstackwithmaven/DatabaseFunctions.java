@@ -17,7 +17,7 @@ public class DatabaseFunctions {
                         + "password=yourpassword;"
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
-                        + "loginTimeout=40;";
+                        + "loginTimeout=50;";
         String user = "sa";
         String pass = "test";
         Connection connection;
