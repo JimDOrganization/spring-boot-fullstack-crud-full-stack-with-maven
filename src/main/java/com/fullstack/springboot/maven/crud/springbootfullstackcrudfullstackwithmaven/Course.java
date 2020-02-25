@@ -1,3 +1,4 @@
+
 package com.fullstack.springboot.maven.crud.springbootfullstackcrudfullstackwithmaven;
 
 public class Course {
@@ -7,6 +8,8 @@ public class Course {
         private String description;
 
     public Course(long l, String in28minutes, String s) {
+        username="test";
+        username="test";
     }
     //no arg constructor
         //constructor with 3 args
