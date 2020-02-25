@@ -1,7 +1,9 @@
 package com.fullstack.springboot.maven.crud.springbootfullstackcrudfullstackwithmaven;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class DatabaseFunctions {
@@ -17,13 +19,34 @@ public class DatabaseFunctions {
                         + "trustServerCertificate=false;"
                         + "loginTimeout=30;";
         String user = "sa";
-        String pass = "77java&&";
-        try (Connection connection = DriverManager.getConnection(connectionUrl,user,pass);) {
-            // Code here.
+        String pass = "test";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(connectionUrl, user, pass);
         }
+
         // Handle any errors that may have occurred.
         catch (SQLException e) {
             e.printStackTrace();
         }
+
+        try{
+        // Create and execute a SELECT SQL statement.
+        String selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
+        ResultSet resultSet = null;
+
+            Statement statement = connection.createStatement();
+
+
+        resultSet = statement.executeQuery(selectSql);
+
+        // Print results from select statement
+        while (resultSet.next()) {
+            System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
+        }
+    }
+        catch (SQLException e) {
+        e.printStackTrace();
+    }
     }
 }
