@@ -10,6 +10,9 @@ public class Course {
     public Course(long l, String in28minutes, String s) {
         username="test";
         username="test";
+
+        username="test";
+        username="test";
     }
     //no arg constructor
         //constructor with 3 args
