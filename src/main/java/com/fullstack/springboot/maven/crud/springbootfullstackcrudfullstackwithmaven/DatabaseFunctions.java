@@ -16,8 +16,9 @@ public class DatabaseFunctions {
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
                         + "loginTimeout=30;";
-
-        try (Connection connection = DriverManager.getConnection(connectionUrl);) {
+        String user = "sa";
+        String pass = "77java&&";
+        try (Connection connection = DriverManager.getConnection(connectionUrl,user,pass);) {
             // Code here.
         }
         // Handle any errors that may have occurred.
