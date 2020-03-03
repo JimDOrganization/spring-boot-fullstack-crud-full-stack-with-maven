@@ -40,7 +40,7 @@ public class DatabaseFunctions {
             String selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
             ResultSet resultSet = null;
 
-            Statement statement = connection.createStatement();
+            Statement statement = databaseConnection.createStatement();
 
 
             resultSet = statement.executeQuery(selectSql);

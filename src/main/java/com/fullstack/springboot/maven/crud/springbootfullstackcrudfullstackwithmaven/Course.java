@@ -7,12 +7,11 @@ public class Course {
         private String username;
         private String description;
 
-    public Course(long l, String in28minutes, String s) {
-        username="test";
-        username="test";
-
-        username="test";
-        username="test";
+    public Course(long id, String username, String description) {
+        super();
+        this.id = id;
+        this.username = username;
+        this.description = description;
     }
     //no arg constructor
         //constructor with 3 args
