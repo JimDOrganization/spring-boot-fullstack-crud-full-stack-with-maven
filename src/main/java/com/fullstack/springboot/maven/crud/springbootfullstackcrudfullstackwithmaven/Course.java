@@ -1,6 +1,9 @@
 
 package com.fullstack.springboot.maven.crud.springbootfullstackcrudfullstackwithmaven;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Course {
 
         private Long id;

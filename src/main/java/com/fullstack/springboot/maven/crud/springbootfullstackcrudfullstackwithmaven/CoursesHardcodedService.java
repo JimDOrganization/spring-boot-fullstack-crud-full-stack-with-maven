@@ -1,5 +1,6 @@
 package com.fullstack.springboot.maven.crud.springbootfullstackcrudfullstackwithmaven;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
