@@ -18,6 +18,7 @@ public class SpringBootFullstackCrudFullStackWithMavenApplication {
            @Override
             public void addCorsMappings(CorsRegistry registry) {
                registry.addMapping("/instructors/{username}/courses").allowedOrigins("http://localhost:3000");
+        //test
             }
         };
     }
