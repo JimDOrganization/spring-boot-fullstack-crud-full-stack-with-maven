@@ -20,6 +20,7 @@ public class SpringBootFullstackCrudFullStackWithMavenApplication {
                registry.addMapping("/instructors/{username}/courses").allowedOrigins("http://localhost:3000");
         //test
                //test3
+               //test4
             }
         };
     }
