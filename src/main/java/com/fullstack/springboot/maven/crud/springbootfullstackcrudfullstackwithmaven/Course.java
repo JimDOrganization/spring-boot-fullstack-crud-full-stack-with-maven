@@ -21,4 +21,8 @@ public class Course {
         //constructor with 3 args
         //getters and setters
         //hashcode and equals
+
+    public Long getId() {
+        return id;
+    }
 }

@@ -12,7 +12,7 @@ public class SpringBootFullstackCrudFullStackWithMavenApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringBootFullstackCrudFullStackWithMavenApplication.class, args);
     }
-   @Bean
+   /*@Bean
    public WebMvcConfigurer corsConfigurer() {
        return new WebMvcConfigurer() {
            @Override
@@ -23,5 +23,5 @@ public class SpringBootFullstackCrudFullStackWithMavenApplication {
                //test4
             }
         };
-    }
+    }*/
 }
