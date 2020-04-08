@@ -25,4 +25,8 @@ public class Course {
     public Long getId() {
         return id;
     }
+
+    public String getDescription() {
+        return description;
+    }
 }
