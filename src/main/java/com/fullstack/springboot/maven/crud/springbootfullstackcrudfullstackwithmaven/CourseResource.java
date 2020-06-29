@@ -2,6 +2,7 @@ package com.fullstack.springboot.maven.crud.springbootfullstackcrudfullstackwith
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -52,5 +53,14 @@ public class CourseResource {
                 .toUri();
 
         return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping("/instructors/{username}/courses/{id}")
+    public ResponseEntity<Course> updateCourse(@PathVariable String username, @PathVariable long id,
+                                               @RequestBody Course course) {
+
+        Course courseUpdated = courseManagementService.save(course);
+
+        return new ResponseEntity<Course>(courseUpdated, HttpStatus.OK);
     }
 }

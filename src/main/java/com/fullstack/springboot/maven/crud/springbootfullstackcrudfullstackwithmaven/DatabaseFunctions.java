@@ -20,6 +20,7 @@ public class DatabaseFunctions {
                         + "loginTimeout=60;";
         String user = "sa";
         String pass = "test";
+        //test
         Connection connection;
         try {
             connection = DriverManager.getConnection(connectionUrl, user, pass);
