@@ -17,7 +17,7 @@ public class DatabaseFunctions {
                         + "password=yourpassword;"
                         + "encrypt=true;"
                         + "trustServerCertificate=false;"
-                        + "loginTimeout=30;";
+                        + "loginTimeout=60;";
         String user = "sa";
         String pass = "test";
         Connection connection;
@@ -30,23 +30,29 @@ public class DatabaseFunctions {
             e.printStackTrace();
         }
 
+
+    }
+
+    public void ExecuteSQLStatement(Connection databaseConnection)
+    {
         try{
-        // Create and execute a SELECT SQL statement.
-        String selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
-        ResultSet resultSet = null;
+            // Create and execute a SELECT SQL statement.
+            String selectSql = "SELECT TOP 10 Title, FirstName, LastName from SalesLT.Customer";
+            ResultSet resultSet = null;
 
-            Statement statement = connection.createStatement();
+            Statement statement = databaseConnection.createStatement();
 
 
-        resultSet = statement.executeQuery(selectSql);
+            resultSet = statement.executeQuery(selectSql);
 
-        // Print results from select statement
-        while (resultSet.next()) {
-            System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
+            // Print results from select statement
+            while (resultSet.next()) {
+                System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
+            }
         }
-    }
         catch (SQLException e) {
-        e.printStackTrace();
-    }
+            e.printStackTrace();
+        }
+
     }
 }
