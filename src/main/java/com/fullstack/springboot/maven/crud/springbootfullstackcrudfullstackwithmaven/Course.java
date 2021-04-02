@@ -7,6 +7,7 @@ public class Course {
         private String username;
         private String description;
 
+
     public Course(long id, String username, String description) {
         super();
         this.id = id;
